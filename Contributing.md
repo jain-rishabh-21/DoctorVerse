@@ -62,7 +62,7 @@ To add the original repository as an upstream remote:
 
 ### To Run the project
 
-- Follow the instructions in [ProjectSetup.md]() to set up the local dev environment
+- Follow the instructions in [ProjectSetup.md](https://github.com/jain-rishabh-21/DoctorVerse/blob/main/ProjectSetup.md) to set up the local dev environment
 
 ## Your first Contribution
 

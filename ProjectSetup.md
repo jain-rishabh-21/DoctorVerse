@@ -1,6 +1,6 @@
 ## Note:
 
-First follow the instructions in [CONTRIBUTING.md](), to clone the project into your local computer.
+First follow the instructions in [CONTRIBUTING.md](https://github.com/jain-rishabh-21/DoctorVerse/blob/main/Contributing.md), to clone the project into your local computer.
 
 # Setting up the Project
 
