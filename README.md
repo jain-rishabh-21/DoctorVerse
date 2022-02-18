@@ -22,7 +22,7 @@ This would be an enriching experience for all Student Developers, Project Manage
 
 ## Technology Stack 🛠️
 
-- **Coding Languages**: Javascript, Python
+- **Coding Languages**: Javascript
 
 - **Tools & Technologies**: React, MongoDB, NodeJs, Amazon Web Services, Postman, Jest, Github Actions (CI/CD)
 
