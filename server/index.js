@@ -1,12 +1,15 @@
-const express = require("express");
 
-const app = express();
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+require('./db/mongoose.js')
+const express=require('express')
+const app=express()
+const port=process.env.PORT || 4000
+app.use(express.json())
+ 
 
-const PORT = 4000;
+const userRoute=require('./routes/user')
+app.use(userRoute)
 
-//start the server on port 4000
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
+
+app.listen(port,()=>{
+    console.log("Backend server is listening on port 4000")
+})
