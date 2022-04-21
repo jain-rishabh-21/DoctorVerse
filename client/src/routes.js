@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 export const routes: Route[] = [
 
 {
-        path:"/home",
+        path:"/",
         element:<Home/>
 
 },
