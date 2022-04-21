@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import React,{useEffect} from 'react'
+import { Router, Outlet } from 'react-location';
+import { routes, location } from "./routes"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+
+      <Router routes={routes} location={location}>
+        <div className="App" >
+            <Outlet />     
+              
+        </div>
+        </Router>
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +28,12 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
 
 export default App;
+
+
+
