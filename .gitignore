@@ -10,3 +10,5 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+package-lock.json
