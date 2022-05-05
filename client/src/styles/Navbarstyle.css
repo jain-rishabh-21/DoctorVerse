@@ -1,0 +1,32 @@
+.navbar-brand{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgba(37, 134, 255, 1) ! important;
+}
+@media only screen and (min-width: 1000px){
+.navbar-brand{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.navbar-nav{
+    font-family: 'Poppins';
+    margin-left: 200px;
+}
+.ms-auto a{
+    display: block;
+    margin-right: 50px;
+    color: white !important;
+    background: linear-gradient(114.61deg, #0072FF 14.4%, #2C99FD 67.81%);
+    border-radius: 17px;
+}
+}
+.navbar-nav a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+}
