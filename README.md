@@ -4,9 +4,8 @@
 
 ## Project Introduction 🙋
 
-Doctorverse is the marketplace for doctors, hospitals, and healthcare professionals. Find the right doctor for you with our interactive map-based interface. Millions of people trust Doctorverse for their needs, which include finding the clinic closest to them, voting on doctors' quality of service, or asking questions to a doctor online. We're more than just an app; we're your personal healthcare assistant!
-
-Doctorverse is the easiest way to find the best doctors and hospitals in your area. We provide you with ratings, reviews, and even give you the option of having a consultation with your doctor online.
+Doctorverse is a project utilizing blockchain technology to create a decentralized database system for storing patient information accessible remotely. 
+Doctorverse is the easiest way to get patients information anywhere in the world
 
 ## Areas of Collaboration 👨‍🏭
 
