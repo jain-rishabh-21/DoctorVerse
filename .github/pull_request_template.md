@@ -39,6 +39,14 @@ Example how to mark a checkbox:-
 - [ ] My changes generate no new warnings.
 - [ ] I have verified/tested my code by running it locally.
 
+## Files Added/Modified
+
+- [List the files you have added or modified in this pull request.]
+
+## Screenshots / Videos / Gif
+
+[Insert screenshots or videos demonstrating the changes you made.]
+
 ## Additional Info (optional)
 
 Any additional information you want to give
