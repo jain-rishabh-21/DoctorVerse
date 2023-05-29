@@ -1,0 +1,25 @@
+name: Close Issue
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  close-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if PR is merged
+        run: echo "PR is merged: ${{ github.event.pull_request.merged }}"
+
+      - name: Close Issue
+        if: github.event.pull_request.merged == true
+        run: |
+          echo "Closing issue ${{ github.event.pull_request.issue_url }}"
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+          API_URL="${{ github.event.pull_request.issue_url }}/comments"
+          ISSUE_COMMENT=$(curl -s -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"body":"Closed via pull request"}' $API_URL)
+          ISSUE_NUMBER=$(jq -r '.issue.number' <<< "$ISSUE_COMMENT")
+          API_URL="${{ github.event.repository.url }}/issues/$ISSUE_NUMBER"
+          curl -s -X PATCH -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"state":"closed"}' $API_URL
