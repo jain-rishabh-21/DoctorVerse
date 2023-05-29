@@ -72,16 +72,16 @@ const doctorSchema = new mongoose.Schema({
         required: true
     },
     placeOfPractice:{
-        type:String
+        type:String,
         required: true
     },
     experience:{
-        type:Number
+        type:Number,
         required: true
     },
     reviews:[{
         review:{
-                type:String
+                type:String,
                 required: true
         }
       }]
