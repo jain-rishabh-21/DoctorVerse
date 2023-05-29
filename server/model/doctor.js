@@ -12,7 +12,7 @@ const doctorSchema = new mongoose.Schema({
         required: true
     },
     /**Preferred language for effective patient-doctor communication and enhanced comprehension. */
-    Language: {
+    language: {
         type: String,
         required: true
     },
@@ -22,7 +22,8 @@ const doctorSchema = new mongoose.Schema({
      * to demonstrate your commitment to providing high-quality care.
      */
     qualityAssurance: {
-        type: String
+        type: String,
+        required: true
     },
     emailAddress: {
         type: String,
@@ -48,7 +49,7 @@ const doctorSchema = new mongoose.Schema({
             type: Number, required: true, min: 0, max: 59
         }
     },
-    // TIme at which clinic will get closed
+    // Time at which clinic will get closed
     closeTime: {
         hours: {
             type: Number, required: true, min: 0, max: 23
@@ -62,22 +63,26 @@ const doctorSchema = new mongoose.Schema({
     },
     clinicHygiene: {
         type: Number, 
-        required:true,
+        required: true,
         min: 1,
         max: 5
     },
     education:{
-        type:String
+        type:String,
+        required: true
     },
     placeOfPractice:{
         type:String
+        required: true
     },
     experience:{
         type:Number
+        required: true
     },
     reviews:[{
         review:{
                 type:String
+                required: true
         }
       }]
     })
