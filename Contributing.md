@@ -133,6 +133,23 @@ To create a PR you need to push your branch to the `origin` remote.
 
 4. Finally, press the green button labelled as `Create pull request`.
 
+### Pull Request title naming conventions
+Please make sure to write the titles of your PRs according to the following conventions-
+```
+feat(scope): some title here
+fix(scope): some title here
+docs(scope): some title here
+chore(scope): some title here
+test(scope): some title here
+build(scope): some title here
+```
+
+Keep in mind the following guidelines-
+1. `scope` must be in **lowercase**
+2. There must be a **blank space** after the colon.
+3. The first letter of the title must be in **lowercase**
+
+To learn more about conventional commit naming [click here](https://www.conventionalcommits.org/en/v1.0.0/)
 ## Learning Resources 📚
 
 - [Git Started with GitHub](https://www.udemy.com/course/git-started-with-github/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-.eo946O7LA.e_kedPDtXLw&utm_medium=udemyads&utm_source=aff-campaign)
