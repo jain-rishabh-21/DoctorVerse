@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm install server/package.json
-      - run: npm install client/package.json
+      - run: npm install server
+      - run: npm install client
       - run: npm run build client --if-present
       # We can add tests here using npm run test
