@@ -6,7 +6,6 @@ const { tokenVerify } = require('../utlits/jwt');
 //SIGNUP-ENDPOINT
 router.post('/userSignUp', registerUser);
 
-
 //LOGIN-ENDPOINT
 router.post('/userLogin', loginUser);
 
