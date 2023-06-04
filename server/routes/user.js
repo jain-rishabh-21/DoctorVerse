@@ -6,7 +6,7 @@ const router = new express.Router();
 
 // Function to generate JWT token
 const generateAuthToken = (user) => {
-  const token = jwt.sign({ _id: user._id.toString() }, 'your-secret-key', { expiresIn: '1h' });
+  const token = jwt.sign({ email: user.email,name:user.name,_id:user._id}, 'your-secret-key', { expiresIn: '1h' });
   return token;
 };
 

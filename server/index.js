@@ -7,7 +7,9 @@ app.use(express.json())
  
 
 const userRoute=require('./routes/user')
-app.use(userRoute)
+const doctorRoute=require('./routes/doctor')
+app.use(userRoute);
+app.use(doctorRoute);
 
 
 app.listen(port,()=>{
