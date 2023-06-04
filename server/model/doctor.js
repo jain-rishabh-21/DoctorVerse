@@ -4,17 +4,17 @@ const mongoose = require('mongoose');
 const doctorSchema = new mongoose.Schema({
   name: {
     type: String,
-    //required: true,
+    required: true,
     trim: true
   },
   specialization: {
     type: String,
-    //required: true
+    required: true
   },
   /** Preferred language for effective patient-doctor communication and enhanced comprehension. */
   language: {
-    type: String,
-    //required: true
+    type: String
+    required: true
   },
   /**
    * Highlight your experience in implementing quality improvement initiatives,
@@ -23,7 +23,7 @@ const doctorSchema = new mongoose.Schema({
    */
   qualityAssurance: {
     type: String,
-    //required: true
+    required: true
   },
   emailAddress: {
     type: String,
@@ -87,21 +87,21 @@ const doctorSchema = new mongoose.Schema({
   },
   education: {
     type: String,
-    //required: true
+    required: true
   },
   placeOfPractice: {
     type: String,
-    //required: true
+    required: true
   },
   experience: {
     type: Number,
-    //required: true
+    required: true
   },
   reviews: [
     {
       review: {
         type: String,
-        //required: true
+        required: true
       }
     }
   ]

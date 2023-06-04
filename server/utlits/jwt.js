@@ -38,8 +38,6 @@ const adminVerify = async (req, res, next) => {
   }
 };
 
-
-
 const tokenSign = async (user) => {
   const { _id, email } = user;
   return await jwt.sign({ _id, email }, process.env.SECRET_TOKEN, {
