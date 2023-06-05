@@ -13,7 +13,7 @@ const doctorSchema = new mongoose.Schema({
   },
   /** Preferred language for effective patient-doctor communication and enhanced comprehension. */
   language: {
-    type: String,
+    type: String
     required: true
   },
   /**
@@ -28,7 +28,7 @@ const doctorSchema = new mongoose.Schema({
   emailAddress: {
     type: String,
     unique: true,
-    required: true,
+    //required: true,
     trim: true,
     lowercase: true,
     validate (value) {
@@ -41,19 +41,19 @@ const doctorSchema = new mongoose.Schema({
   openTime: {
     hours: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 23
     },
     minutes: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 59
     },
     seconds: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 59
     }
@@ -62,26 +62,26 @@ const doctorSchema = new mongoose.Schema({
   closeTime: {
     hours: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 23
     },
     minutes: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 59
     },
     seconds: {
       type: Number,
-      required: true,
+      //required: true,
       min: 0,
       max: 59
     }
   },
   clinicHygiene: {
     type: Number,
-    required: true,
+    //required: true,
     min: 1,
     max: 5
   },
