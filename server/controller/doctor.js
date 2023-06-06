@@ -1,4 +1,4 @@
-const doctor = require('../mongodb/models/doctor');
+const doctor = require('../model/doctor');
 
 const getDoctor = async (req, res) => {
     try {

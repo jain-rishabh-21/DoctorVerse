@@ -1,7 +1,7 @@
-const User = require('../mongodb/models/user');
-const { encodePassword, decodePassword } = require('../Authentication/passwordEndcodeDecode');
+const User = require('../model/User');
+const { encodePassword, decodePassword } = require('../utlits/passwordEndcodeDecode');
 const { userLoginSchema, userRegisterSchema, userUpdateSchema } = require('../validation/userValidate');
-const { tokenSign } = require('../Authentication/jwt');
+const { tokenSign } = require('../utlits/jwt');
 
 // SIGNUP-CONTROLLER
 const registerUser = async (req, res) => {

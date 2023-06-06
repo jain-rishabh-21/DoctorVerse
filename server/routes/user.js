@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { loginUser, registerUser, updateUser } = require('../controller/user');
-const { tokenVerify } = require('../Authentication/jwt');
+const { tokenVerify } = require('../utlits/jwt');
 
 // SIGNUP-ENDPOINT
 router.post('/userSignUp', registerUser);

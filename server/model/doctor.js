@@ -13,7 +13,7 @@ const doctorSchema = new mongoose.Schema({
   },
   /** Preferred language for effective patient-doctor communication and enhanced comprehension. */
   language: {
-    type: String,
+    type: String
     required: true
   },
   /**
