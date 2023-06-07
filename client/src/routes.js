@@ -1,28 +1,25 @@
 import React from "react"
-import {  Route,  ReactLocation } from "react-location";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 
-export const routes: Route[] = [
+export const routes = [
 
 {
         path:"/",
-        element:<Home/>
+        element:Home
 
 },
 {
         path:"/contact",
-        element:<Contact/>
+        element:Contact
 },
 {
         path:"/about",
-        element:<AboutUs/>
+        element:AboutUs
 }
 
 
 
 ];
-
-export const location = new ReactLocation();

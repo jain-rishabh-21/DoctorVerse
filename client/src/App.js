@@ -1,18 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import React,{useEffect} from 'react'
-import { Router, Outlet } from 'react-location';
-import { routes, location } from "./routes"
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'; 
+import { routes} from "./routes"
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
 
-      <Router routes={routes} location={location}>
-        <div className="App" >
-            <Outlet />     
-              
-        </div>
+      <Router routes={routes}>
+        <Routes> 
+         <Route  exact path={routes[0].path} Component={routes[0].element}/>
+         <Route path={routes[1].path} Component={routes[1].element}/>
+         <Route path={routes[2].path} Component={routes[2].element}/>
+         </Routes>
         </Router>
 
       {/* <header className="App-header">
