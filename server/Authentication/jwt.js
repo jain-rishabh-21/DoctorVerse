@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../model/User');
+const User = require('../mongodb/models/user');
 const tokenVerify = async (req, res, next) => {
   try {
     if (req.headers && req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
