@@ -42,17 +42,17 @@ This will run both server and client simultaneously.
 
 If you want to run just the client or the server use the following commands below:
 
-**_1._** To run the server- (Run this in the server folder)
+   1. To run the server- (Run this in the server folder)
 
-```
-npm run server
-```
+  ```
+  npm run server
+  ```
 
-**_2._** To run the client (Run this in the server folder)-
+   2. To run the client (Run this in the server folder)-
 
-```
-npm run client
-```
+  ```
+  npm run client
+  ```
 
 ### Project Live at:
 
