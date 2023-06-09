@@ -26,6 +26,13 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: Number
+  },
+  resetPasswordToken: {
+    type: String,
+    default: null
+  },
+  resetPasswordExpires: {
+    type: Date
   }
 });
 
