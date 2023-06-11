@@ -1,9 +1,9 @@
-const connectDB = require('./db/mongoose.js');
+const connectDB = require('../server/mongodb/connect');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
-const userRoute = require('./routes/user');
-const doctorRoute = require('./routes/doctor');
+const userRoute = require('../server/routes/user');
+const doctorRoute = require('../server/routes/doctor');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
