@@ -10,3 +10,4 @@ module.exports = async () => {
     process.exit(1);
   }
 };
+// C:\Users\sneha\doctor(gssoc)\server\index.js

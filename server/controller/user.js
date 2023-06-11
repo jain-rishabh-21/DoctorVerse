@@ -6,6 +6,7 @@ const { tokenSign } = require('../Authentication/jwt');
 // SIGNUP-CONTROLLER
 const registerUser = async (req, res) => {
   try {
+    
     const payloadValidate = await userRegisterSchema.validateAsync(req.body);
     const { name, email, password } = payloadValidate;
     const hashPassword = await encodePassword(password);
