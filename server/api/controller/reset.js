@@ -1,9 +1,9 @@
-const { transporter } = require('../utlits/transportMail');
-const { changePasswordSchema, forgotPasswordSchema, resetPasswordSchema } = require('../validation/resetValidate');
-const { decodePassword, encodePassword } = require('../utlits/passwordEndcodeDecode');
-const User = require('../model/User');
-const { resetToken } = require('../utlits/jwt');
-const { resetEmail } = require('../utlits/templates');
+const { transporter } = require('');
+const { changePasswordSchema, forgotPasswordSchema, resetPasswordSchema } = require('../validations/reset');
+const { decodePassword, encodePassword } = require('../Authentication/passwordEncodeDecode');
+const User = require('../models/doctor');
+const { resetToken } = require('../Authentication/jwt');
+const { resetEmail } = require('../Authentication/template');
 
 const changePassword = async (req, res) => {
   try {

@@ -1,7 +1,7 @@
-const User = require('../model/User');
-const { encodePassword, decodePassword } = require('../utlits/passwordEndcodeDecode');
-const { userLoginSchema, userRegisterSchema, userUpdateSchema } = require('../validation/userValidate');
-const { tokenSign } = require('../utlits/jwt');
+const User = require('../models/user');
+const { encodePassword, decodePassword } = require('../Authentication/passwordEncodeDecode');
+const { userLoginSchema, userRegisterSchema, userUpdateSchema } = require('../validations/user');
+const { tokenSign } = require('../Authentication/jwt');
 
 // SIGNUP-CONTROLLER
 const registerUser = async (req, res) => {
