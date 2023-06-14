@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { forgotPassword, changePassword, resetPassword } = require('../controller/reset');
-const { tokenVerify } = require('../utlits/jwt');
+const { tokenVerify } = require('../Authentication/jwt');
 
 router.put('/changePassword', tokenVerify, changePassword);
 

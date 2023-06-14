@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getDoctor, getDoctorById, createDoctor, updateDoctor, deleteDoctor } = require('../controller/doctor');
-const { adminVerify } = require('../utlits/jwt');
+const { adminVerify } = require('../');
 
 // GET-ALL-DOCTOR-ENDPOINT
 router.get('/getDoctor', getDoctor);
