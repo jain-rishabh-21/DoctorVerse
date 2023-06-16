@@ -4,7 +4,7 @@
 
 ## Project Introduction 🙋
 
-Doctorverse is a project utilizing blockchain technology to create a decentralized database system for storing patient information accessible remotely. 
+Doctorverse is a project utilizing blockchain technology to create a decentralized database system for storing patient information accessible remotely.
 Doctorverse is the easiest way to get patients information anywhere in the world
 
 ## Areas of Collaboration 👨‍🏭
