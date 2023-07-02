@@ -1,8 +1,8 @@
-import React from "react"
-import AboutUs from "./pages/AboutUs";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
+import React, { lazy } from "react"
 
+const Home=lazy(()=>import("./pages/Home"))
+const AboutUs=lazy(()=>import("./pages/AboutUs"))
+const Contact=lazy(()=>import("./pages/Contact"))
 
 export const routes = [
 
