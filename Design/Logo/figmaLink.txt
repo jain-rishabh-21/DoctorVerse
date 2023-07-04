@@ -1,5 +1,6 @@
 Design for home page and login/signup page
 
-Figma file link - https://www.figma.com/file/U5aVSYT9hPOK7HKbadSKWF/DoctorVerse?type=design&mode=design&t=jM6T1OKqjjU6ETAI-1
+Figma file link 
+https://www.figma.com/file/U5aVSYT9hPOK7HKbadSKWF/DoctorVerse?type=design&mode=design&t=jM6T1OKqjjU6ETAI-1
 
 
