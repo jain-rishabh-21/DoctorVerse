@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import React,{useEffect} from 'react'
+import React from 'react'
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'; 
 import { routes} from "./routes"
-import Home from './pages/Home';
 
 function App() {
   return (
@@ -14,6 +12,8 @@ function App() {
          <Route  exact path={routes[0].path} Component={routes[0].element}/>
          <Route path={routes[1].path} Component={routes[1].element}/>
          <Route path={routes[2].path} Component={routes[2].element}/>
+         <Route path={routes[3].path} Component={routes[3].element}/>
+          <Route path={routes[4].path} Component={routes[4].element}/>
          </Routes>
         </Router>
 

@@ -1,4 +1,4 @@
-const { transporter } = require('');
+const { transporter } = require('../Authentication/transportmail');
 const { changePasswordSchema, forgotPasswordSchema, resetPasswordSchema } = require('../validations/reset');
 const { decodePassword, encodePassword } = require('../Authentication/passwordEncodeDecode');
 const User = require('../models/doctor');
