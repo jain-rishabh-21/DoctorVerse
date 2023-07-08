@@ -1,21 +1,24 @@
 import './App.css';
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { routes } from "./routes"
+import React,{Suspense} from 'react'
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'; 
+import { routes} from "./routes"
+import Loading from './components/Loading/Loading';
 
 function App() {
   return (
     <div className="App">
 
       <Router routes={routes}>
-        <Routes>
-          <Route exact path={routes[0].path} Component={routes[0].element} />
-          <Route path={routes[1].path} Component={routes[1].element} />
-          <Route path={routes[2].path} Component={routes[2].element} />
-          <Route path={routes[3].path} Component={routes[3].element} />
-          <Route path={routes[4].path} Component={routes[4].element} />
-        </Routes>
-      </Router>
+        <Suspense fallback={<Loading/>}>
+        <Routes> 
+         <Route  exact path={routes[0].path} Component={routes[0].element}/>
+         <Route path={routes[1].path} Component={routes[1].element}/>
+         <Route path={routes[2].path} Component={routes[2].element}/>
+         <Route path={routes[3].path} Component={routes[3].element} />
+         <Route path={routes[4].path} Component={routes[4].element} />
+         </Routes>
+        </Suspense>
+       </Router>
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

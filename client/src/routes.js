@@ -3,7 +3,11 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
+import React, { lazy } from "react"
 
+const Home=lazy(()=>import("./pages/Home"))
+const AboutUs=lazy(()=>import("./pages/AboutUs"))
+const Contact=lazy(()=>import("./pages/Contact"))
 
 export const routes = [
 
