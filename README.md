@@ -1,4 +1,4 @@
-![DocterVerse](Design/Logo/1.png)
+![DoctorVerse](https://socialify.git.ci/jain-rishabh-21/DoctorVerse/image?description=1&descriptionEditable=Doctorverse%20is%20a%20project%20utilizing%20blockchain%20technology%20to%20create%20a%20decentralized%20database%20system%20for%20storing%20patient%20information%20accessible%20remotely&font=Jost&forks=1&issues=1&language=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1)
 
 <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="Nodejs" src="https://img.shields.io/badge/Node.js-%234ea94b.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
 
