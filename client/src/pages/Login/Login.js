@@ -19,15 +19,15 @@ export default function Login() {
       </div>
       <div className='form-element'>
         <label htmlFor='email'>E-mail Address</label>
-        <input name='email' className='input' type='text' autoComplete='off' id='email' required aria-required="true"></input>
+        <input name='email' className='input' type='email' autoComplete='off' id='email' required aria-required="true"></input>
       </div>
       <div className='form-element'>
         <label htmlFor='password'>Create Password</label>
-        <input name='password' className='input' type='text' autoComplete='off' id='password' required aria-required="true"></input>
+        <input name='password' className='input' type='password' autoComplete='off' id='password' required aria-required="true"></input>
       </div>
       <div className='form-element'>
         <label htmlFor='confirmPassword'>Confirm Password</label>
-        <input name='confirm password' className='input' type='text' autoComplete='off' id='confirmPassword' required aria-required="true"></input>
+        <input name='confirm password' className='input' type='password' autoComplete='off' id='confirmPassword' required aria-required="true"></input>
       </div>
       {/* Form Buttons */}
       <div className='FormButtonsDiv'>
