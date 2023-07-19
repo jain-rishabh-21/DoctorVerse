@@ -34,16 +34,19 @@ export default function Login() {
         <div className='signUp'><button className='formButton'>Sign Up</button></div>
         <div className='line'></div>
         <div className='signUpWithSocials'>
-              <a href="https://www.freepnglogos.com/pics/google-logo" title="Image from freepnglogos.com">
+          <div className='socialSignupHeading'>signup with</div>
+          <div className='signUpSocialsContainer'>
+          <a href="https://www.freepnglogos.com/pics/google-logo" title="Image from freepnglogos.com">
                 <img 
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png"
-                 width="50" alt="google logo icon png transparent background osteopathy" />
+                 width="50" height="50" alt="google logo icon png transparent background osteopathy" loading='lazy' />
                 </a>
                 <div className='dot'></div>
                 <a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com">
                   <img style={{backgroundColor: "white",borderRadius: "50%",border: "1px solid rgb(0,0,0,0)"}} src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png"
-                   width="50" alt="facebook icon png background" />
+                   width="50" height="50" alt="facebook icon png background" loading='lazy' />
                 </a>
+          </div>
         </div>
       </div>
     </form>

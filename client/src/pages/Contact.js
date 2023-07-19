@@ -1,8 +1,6 @@
-import React from 'react'
-
 function Contact() {
   return (
-    <div>Contact</div>
+    <section aria-label='Contact page'>Contact</section>
   )
 }
 
