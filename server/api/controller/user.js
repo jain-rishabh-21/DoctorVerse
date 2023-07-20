@@ -61,8 +61,18 @@ const updateUser = async (req, res) => {
   }
 };
 
+const getUser = async (req, res) => {
+  try {
+    const users = await User.find({}); // Corrected the query to retrieve all users
+    res.status(200).json({ users });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
-  updateUser
+  updateUser,
+  getUser
 };
