@@ -1,12 +1,18 @@
-const mongoose = require('mongoose');
-
-module.exports = async () => {
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config();
+mongoose.set("strictQuery", true);
+const connectDB = async () => {
   try {
-    mongoose.set('strictQuery', true);
-    const conn = await mongoose.connect('mongodb://127.0.0.1:27017/DoctorVerse');
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error(`Error : ${error.message}`);
+    const connect = await mongoose.connect(process.env.DATABASE_KEY);
+    console.log(
+      "Successfully connected to mongodb database:",
+      connect.connection.host,
+      connect.connection.name
+    );
+  } catch (err) {
+    console.log(err);
     process.exit(1);
   }
 };
+module.exports = connectDB;
