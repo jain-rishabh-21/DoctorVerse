@@ -1,0 +1,202 @@
+@media screen and (min-width: 992px) {
+    .text1{
+        position: absolute;
+        width: 500px;
+        height: 240px;
+        left: 102px;
+        top: 285px;   
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 120px;
+        text-align: left;
+        display: flex;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    .text2{
+    position: absolute;
+    width: 572px;
+    height: 144px;
+    left: 102px;
+    top: 544px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #6A6A6A;
+    }
+    #available_doctors{
+        position: absolute;
+        left: 920px;
+        top: 700px;
+    }
+    #rating{
+        position: absolute;
+        left: 700px;
+        top: 430px;
+        width: 200px;
+    }
+    #doctor{
+        position: absolute;
+        width: 900px;
+        height: 654.45px;
+        left: 400px;
+        top: 160px;
+    }
+    .book{
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 297px;
+        height: 50px;
+        left: 102px;
+        top: 738px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        color: #fff;
+        background: linear-gradient(114.61deg, #0072FF 14.4%, #2C99FD 67.81%);
+        box-shadow: 0px 0px 10px rgba(0, 77, 176, 0.25);
+        border-radius: 20px;
+    }
+    .book_content{
+        flex:1;
+    }
+    *{
+        font-family: 'Poppins';
+        font-style: normal;
+    }
+}
+/* below 992 */
+@media screen and (max-width: 992px){
+    .text1{
+        font-weight: 600;
+        text-align: left;
+        display: flex;
+        letter-spacing: 0.02em;
+        color: #000000;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 120px;
+    }
+    .text2{
+        text-align: left;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        color: #6A6A6A;
+    }
+    .flexbox_2{
+        margin-top: 100px;
+        width: 100%;
+        height: 300px;
+    }
+    #doctor{
+        position: relative;
+        width: inherit;
+        height: 500px; 
+    }
+    #rating{
+        position: absolute;
+        top: 820px;
+        left: 250px;
+        width: 200px;
+    }
+    #available_doctors{
+        position: absolute;
+        width: 250px;
+        left: 500px;
+        top: 1050px;
+    }
+    .book{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 297px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 26px;
+        color: #fff;
+        background: linear-gradient(114.61deg, #0072FF 14.4%, #2C99FD 67.81%);
+        box-shadow: 0px 0px 10px rgba(0, 77, 176, 0.25);
+        border-radius: 20px;
+    }
+    .book_content{
+        flex:1;
+    }
+    *{
+    font-family: 'Poppins';
+    font-style: normal;
+    }
+    
+}
+/* below 700 */
+@media screen and (max-width: 700px){
+    .text1{
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 90px;
+        text-align: left;
+        display: flex;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    .text2{
+        text-align: left;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #6A6A6A;
+    }
+    .flexbox_2{
+        margin-top: 30px;
+        width: 100%;
+        height: 300px;
+    }
+    #rating{
+        position: absolute;
+        top: 600px;
+        left: 120px;
+        width: 100px;
+    }
+    #doctor{
+        position: relative;
+        width: inherit;
+        height: 300px; 
+    }
+    #available_doctors{
+        position: absolute;
+        top: 750px;
+        left: 200px;
+        width: 150px;
+    }
+    .book{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        background: linear-gradient(114.61deg, #0072FF 14.4%, #2C99FD 67.81%);
+        box-shadow: 0px 0px 10px rgba(0, 77, 176, 0.25);
+        border-radius: 20px;
+    }
+    .book_content{
+        flex:1;
+    }
+    *{
+    font-family: 'Poppins';
+    font-style: normal;
+    }
+    
+}
