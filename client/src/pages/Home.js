@@ -1,8 +1,6 @@
-import React from 'react'
-
 function Home() {
   return (
-    <div>Home</div>
+    <section aria-label='Home page'>Home</section>
   )
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Inria+Serif&display=swap');
+
 body{
     background-color: #DCDCEF;
     padding: 0;
@@ -23,8 +25,7 @@ body{
 .formDiv{
     background-color: #424088;
     width: 40%;
-    min-height: 60vh;
-    border-radius: 10px;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,19 +36,21 @@ body{
 .formDiv h3{
 font-family: 'Inria Serif';
 font-style: normal;
-font-weight: lighter;
-font-size: 3rem;
+font-weight: 400;
+font-size: 60px;
 /* identical to box height */
 text-align: center;
 letter-spacing: 0.06em;
 color: #FFFFFF;
 margin: 5% 0%;
+line-height: 84px;
+text-transform: uppercase;
 }
 
 
 /* Form Element {Input Div} */
 .form-element{
-    width: 75%;
+    width: 88%;
     margin: 2% ;
     display: flex;
     flex-direction: row;
@@ -63,7 +66,7 @@ input[type=text] {
     border-bottom: 1px solid #9694E4;
     outline: none;
     position: relative;
-    width: 40%;
+    width: 60%;
   }
   
   
@@ -75,6 +78,7 @@ input[type=text] {
     color: white;
     font-weight: lighter;
     font-size: 1.2rem;
+    text-align: left;
   }
 
 
@@ -82,9 +86,9 @@ input[type=text] {
   .FormButtonsDiv{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 80%;
     height: 10%;
     padding: 5%;
   }
@@ -97,31 +101,52 @@ input[type=text] {
     z-index: 6;
   }
 
-  button{
+  .signUp button{
     color: white;
     font-weight: 500;
     background-color: rgba(150, 148, 228, 0.35);
-    border-radius: 20px;
     border: none;
-    height: 3rem;
-    width: 6rem;
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
   }
+
+  
 
   /* Company Logos */
   .signUpWithSocials{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .signUpWithSocials img{
+  .socialSignupHeading{
+    text-transform: uppercase;
+    color: white;
+    font-family: Cairo;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .signUpSocialsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .signUpSocialsContainer img{
     margin: 0%;
     border: none;
   }
   /* Dot between images */
   .dot{
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     background-color:  rgba(255, 255, 255, 0.354);
     border-radius: 50%;
     border: none;
@@ -141,6 +166,7 @@ top: 45%;
 
 background: #A6A9E3;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
 
 /* Solid Purple Colored  */
@@ -152,10 +178,8 @@ left: -10%;
 top: 75%;
 background: #424088;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
-
-
-
 
 /* Tilted Rectangular Div's Right */
 .rectangleLeft{
@@ -166,6 +190,7 @@ left: 75%;
 top: 30%;
 background: #A6A9E3;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
 .rectanglePurpleLeft{
     position: absolute;
@@ -175,4 +200,20 @@ left: 75%;
 top: 60%;
 background: #424088;
 transform: rotate(-19.86deg);
+z-index: -1;
+}
+
+@media screen and (max-width:1000px){
+  .FormButtonsDiv{
+    flex-direction: column;
+  }
+
+  .line{
+    height: 1px;
+     min-height: auto;
+     margin-top: 20px;
+    width: 200px;
+    background-color:  white;
+    z-index: 6;
+  }
 }
