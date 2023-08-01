@@ -11,23 +11,23 @@ export default function Login() {
 
     {/* Login Actual Div */}
     <div className='loginDiv'>
-    <form className='formDiv'>
+    <form className='formDiv' aria-label='login form'>
       <h3>Doctor Verse</h3>
       <div className='form-element'>
-        <label>Username</label>
-        <input name='name' className='input' type='text' autoComplete='off'></input>
+        <label htmlFor='name'>Username</label>
+        <input name='name' className='input' type='text' autoComplete='off' id='name' required aria-required="true"></input>
       </div>
       <div className='form-element'>
-        <label>E-mail Address</label>
-        <input name='email' className='input' type='text' autoComplete='off'></input>
+        <label htmlFor='email'>E-mail Address</label>
+        <input name='email' className='input' type='email' autoComplete='off' id='email' required aria-required="true"></input>
       </div>
       <div className='form-element'>
-        <label>Create Password</label>
-        <input name='password' className='input' type='text' autoComplete='off'></input>
+        <label htmlFor='password'>Create Password</label>
+        <input name='password' className='input' type='password' autoComplete='off' id='password' required aria-required="true"></input>
       </div>
       <div className='form-element'>
-        <label>Confirm Password</label>
-        <input name='confirm password' className='input' type='text' autoComplete='off'></input>
+        <label htmlFor='confirmPassword'>Confirm Password</label>
+        <input name='confirm password' className='input' type='password' autoComplete='off' id='confirmPassword' required aria-required="true"></input>
       </div>
       {/* Form Buttons */}
       <div className='FormButtonsDiv'>
