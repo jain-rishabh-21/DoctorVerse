@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000;
 const userRoute = require('./api/routes/user');
 const doctorRoute = require('./api/routes/doctor');
 const resetRoute = require('./api/routes/reset');
+const prescriptionRoute = require('./api/routes/prescription');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
@@ -14,12 +15,13 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-dotenv.config({ path: '.env' });
+dotenv.config();
 
 // Routes Call
 app.use(userRoute);
 app.use(doctorRoute);
 app.use(resetRoute);
+app.use(prescriptionRoute);
 
 app.listen(port, () => {
   console.log(`Backend server is listening on port ${port}`);

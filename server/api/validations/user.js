@@ -17,6 +17,8 @@ const userUpdateSchema = Joi.object().keys({
   name: Joi.string().required()
 });
 
+
+
 module.exports = {
   userLoginSchema,
   userRegisterSchema,
