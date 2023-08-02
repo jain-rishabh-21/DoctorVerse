@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Inria+Serif&display=swap');
+
 body{
   background-color: #DCDCEF;
   padding: 0;
@@ -29,19 +31,20 @@ body{
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-}
 
 /* Doctor Verse Heading */
 .formDiv h3{
 font-family: 'Inria Serif';
 font-style: normal;
-font-weight: lighter;
-font-size: 3rem;
+font-weight: 400;
+font-size: 60px;
 /* identical to box height */
 text-align: center;
 letter-spacing: 0.06em;
 color: #FFFFFF;
 margin: 5% 0%;
+line-height: 84px;
+text-transform: uppercase;
 }
 
 
@@ -130,6 +133,7 @@ button{
 }
 
 
+
 /* Rectangular Div's */
 /* Tilted Rectangular Div */
 .rectangleRight{
@@ -141,6 +145,7 @@ top: 45%;
 
 background: #A6A9E3;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
 
 /* Solid Purple Colored  */
@@ -152,10 +157,8 @@ left: -10%;
 top: 75%;
 background: #424088;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
-
-
-
 
 /* Tilted Rectangular Div's Right */
 .rectangleLeft{
@@ -166,6 +169,7 @@ left: 75%;
 top: 30%;
 background: #A6A9E3;
 transform: rotate(-19.86deg);
+z-index: -1;
 }
 .rectanglePurpleLeft{
   position: absolute;
@@ -175,4 +179,20 @@ left: 75%;
 top: 60%;
 background: #424088;
 transform: rotate(-19.86deg);
+z-index: -1;
+}
+
+@media screen and (max-width:1000px){
+  .FormButtonsDiv{
+    flex-direction: column;
+  }
+
+  .line{
+    height: 1px;
+     min-height: auto;
+     margin-top: 20px;
+    width: 200px;
+    background-color:  white;
+    z-index: 6;
+  }
 }
