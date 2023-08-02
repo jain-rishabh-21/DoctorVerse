@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
 const userRoute = require('./api/routes/user');
+const prescriptionRoute = require('./api/routes/prescription');
 const doctorRoute = require('./api/routes/doctor');
 const resetRoute = require('./api/routes/reset');
 const dotenv = require('dotenv');
@@ -20,7 +21,10 @@ dotenv.config({ path: '.env' });
 app.use(userRoute);
 app.use(doctorRoute);
 app.use(resetRoute);
+app.use(prescriptionRoute);
 
 app.listen(port, () => {
   console.log(`Backend server is listening on port ${port}`);
 });
+
+
