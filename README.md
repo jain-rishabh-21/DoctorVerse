@@ -48,3 +48,8 @@ This would be an enriching experience for all Student Developers, Project Manage
   <a href="https://github.com/jain-rishabh-21/DoctorVerse/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jain-rishabh-21/DoctorVerse" />
 </a></p>
+
+## 🌐 Socials:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/rishabh-jain-iitm/) 
+[![Twitter](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jain-rishabh-21) 
