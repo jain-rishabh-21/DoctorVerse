@@ -3,7 +3,7 @@ import './loading.css'
 
 const Loading = () => {
   return (
-    <div className='loader'>
+    <div className='loader' aria-label='loader spinner'>
         <Oval
             ariaLabel="loading-indicator"
             height={50}

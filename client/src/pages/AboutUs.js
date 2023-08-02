@@ -1,8 +1,6 @@
-import React from 'react'
-
 function AboutUs() {
   return (
-    <div>AboutUs</div>
+    <section aria-label='About us page'>AboutUs</section>
   )
 }
 

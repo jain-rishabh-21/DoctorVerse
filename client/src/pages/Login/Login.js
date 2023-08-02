@@ -107,7 +107,7 @@ export default function Login() {
             </p>
           </div>
 
-        </form>
+          </form>
       </div>
 
       {/* Styling rectangles */}

@@ -1,9 +1,9 @@
-const { transporter } = require('../Authentication/transportmail');
 const { changePasswordSchema, forgotPasswordSchema, resetPasswordSchema } = require('../validations/reset');
 const { decodePassword, encodePassword } = require('../Authentication/passwordEncodeDecode');
 const User = require('../models/doctor');
 const { resetToken } = require('../Authentication/jwt');
 const { resetEmail } = require('../Authentication/template');
+const { transporter } = require('../Authentication/transportmail');
 
 const changePassword = async (req, res) => {
   try {

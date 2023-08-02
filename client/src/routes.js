@@ -1,20 +1,16 @@
-import AboutUs from "./pages/AboutUs";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Login from "./pages/Login"
-import SignUp from "./pages/SignUp"
 import React, { lazy } from "react"
 
 const Home=lazy(()=>import("./pages/Home"))
 const AboutUs=lazy(()=>import("./pages/AboutUs"))
 const Contact=lazy(()=>import("./pages/Contact"))
+const Login=lazy(()=>import("./pages/Login/Login"))
+const SignUp=lazy(()=>import("./pages/SignUp/SignUp"))
 
 export const routes = [
 
 {
         path:"/",
         element:Home
-
 },
 {
         path:"/contact",
@@ -25,13 +21,11 @@ export const routes = [
         element:AboutUs
 },
 {
-        path:"/Login",
+        path:"/login",
         element:Login
 },
 {
-        path:"/register",
+        path:"/signup",
         element:SignUp
 }
-
-
 ];
