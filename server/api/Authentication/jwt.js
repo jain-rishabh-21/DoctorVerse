@@ -7,7 +7,7 @@ const tokenVerify = async (req, res, next) => {
     if (req.headers && req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
       const authToken = req.headers.authorization;
       const token = authToken.split(' ')[1];
-      const decodeToken = await jwt.verify(token, process.env.SECRET_TOKEN);
+      const decodeToken = await jwt.verify(token, 'DoctorVerseOpenSource');
       const { _id } = decodeToken;
       req.user = await User.findById(_id);
       next();
@@ -24,7 +24,7 @@ const adminVerify = async (req, res, next) => {
     if (req.headers && req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
       const authToken = req.headers.authorization;
       const token = authToken.split(' ')[1];
-      const decodeToken = await jwt.verify(token, process.env.SECRET_TOKEN);
+      const decodeToken = await jwt.verify(token, 'DoctorVerseOpenSource');
       const { _id } = decodeToken;
       req.user = await User.findById(_id, { password: 0 });
       if (req.user.email === 'admin@gmail.com') {
@@ -42,7 +42,7 @@ const adminVerify = async (req, res, next) => {
 
 const tokenSign = async (user) => {
   const { _id, email } = user;
-  return await jwt.sign({ _id, email }, process.env.SECRET_TOKEN, {
+  return await jwt.sign({ _id, email }, 'DoctorVerseOpenSource', {
     expiresIn: '1d'
   });
 };
