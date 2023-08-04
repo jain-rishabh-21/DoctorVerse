@@ -60,26 +60,34 @@ text-transform: uppercase;
 
 
 /* Inputs */
-input[type=text] {
+/* input[type=text] {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #9694E4;
     outline: none;
     position: relative;
     width: 60%;
-  }
+  } */
   
   
   /* Label */
 
-  label{
+  /* label{
     font-family: 'Cairo';
     font-style: normal;
     color: white;
     font-weight: lighter;
     font-size: 1.2rem;
     text-align: left;
-  }
+  } */
+
+  /* .labelIcon {
+    position: relative;
+    top: 10px;
+    left: 0;
+    align-items: center;
+    color: cyan;
+  } */
 
 
   /* Buttons */
