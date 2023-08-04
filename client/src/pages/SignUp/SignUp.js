@@ -1,17 +1,21 @@
 import React from 'react'
-import './login.css'
+import './signUp.css'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-export default function Login() {
-  const [details, setDetails] = React.useState({ email: '', password: '' })
+export default function SignUp() {
+  const [details, setDetails] = React.useState({ name: '', email: '', password: '', confirmPassword: '' })
   const navigate = useNavigate()
-  const handleLogin = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault()
-    const { email, password } = details
-    const user = { email, password }
+    const { name, email, password } = details
+    const user = { name, email, password }
     try {
-      const response = await fetch('http://localhost:4000/userLogin', {
+      if (password !== details.confirmPassword) {
+        alert('Passwords do not match')
+        return
+      }
+      const response = await fetch('http://localhost:4000/userSignUp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -19,10 +23,9 @@ export default function Login() {
         body: JSON.stringify(user)
       })
       const json = await response.json()
-      if (json.token) {
-        alert('Login Successful')
-        localStorage.setItem('token', json.token)
-        navigate('/')
+      if (json.name !== undefined) {
+        alert('Sign Up Successful')
+        navigate('/login')
       }
       else {
         alert('Invalid Credentials')
@@ -34,7 +37,6 @@ export default function Login() {
 
   return (
     <>
-
       <div className='rectangleRight'></div>
 
       <div className='rectanglePurpleRight'></div>
@@ -44,7 +46,20 @@ export default function Login() {
         <form className='formDiv'>
           <h3>Doctor Verse</h3>
           <div className='form-element'>
-            <label>E-mail</label>
+            <label>Username</label>
+            <input
+              name='name'
+              className='input'
+              type='text' autoComplete='off'
+              onChange={
+                e => setDetails({ ...details, name: e.target.value })
+              }
+              value={details.name}
+              style={{ color: '#F2F2F2' }}
+              required />
+          </div>
+          <div className='form-element'>
+            <label>E-mail Address</label>
             <input
               name='email'
               className='input'
@@ -54,11 +69,11 @@ export default function Login() {
                 e => setDetails({ ...details, email: e.target.value })
               }
               value={details.email}
-              required
-              style={{ color: '#F2F2F2' }} />
+              style={{ color: '#F2F2F2' }}
+              required />
           </div>
           <div className='form-element'>
-            <label>Password</label>
+            <label>Create Password</label>
             <input
               name='password'
               className='input'
@@ -68,9 +83,24 @@ export default function Login() {
                 e => setDetails({ ...details, password: e.target.value })
               }
               value={details.password}
-              required
-              style={{ color: '#F2F2F2' }} />
+              style={{ color: '#F2F2F2' }}
+              required />
           </div>
+          <div className='form-element'>
+            <label>Confirm Password</label>
+            <input
+              name='password'
+              className='input'
+              type='text'
+              autoComplete='off'
+              onChange={
+                e => setDetails({ ...details, confirmPassword: e.target.value })
+              }
+              value={details.confirmPassword}
+              style={{ color: '#F2F2F2' }}
+              required />
+          </div>
+
           {/* Form Buttons */}
           <div className='FormButtonsDiv'>
             <div className='signUp'><button className='formButton'
@@ -79,13 +109,13 @@ export default function Login() {
                 color: '#000000',
                 border: '1px solid #000000',
                 borderRadius: '5px',
-                width: '4rem',
-                height: '2rem',
+                width: '5rem',
+                height: '3rem',
                 fontSize: '1rem',
                 fontWeight: 'bold',
                 cursor: 'pointer'
               }}
-              onClick={handleLogin}>Login</button></div>
+              onClick={handleSignUp}>Sign Up</button></div>
             <div className='line'></div>
             <div className='signUpWithSocials'>
               <a href="https://www.freepnglogos.com/pics/google-logo" title="Image from freepnglogos.com">
@@ -102,12 +132,12 @@ export default function Login() {
           </div>
           <div className='signUp'>
             <p
-              style={{ color: '#F2F2F2', fontSize: '18px', marginTop: '10px', marginBottom: '10px' }}>
-              Don't have an account? <Link to='/register' style={{ color: '#FFF', textDecoration: 'none' }}>Sign Up</Link>
+              style={{ color: '#f2f2f2', fontSize: '18px', marginTop: '10px', marginBottom: '10px' }} >
+              Already have an account? <Link to='/login' style={{ color: '#ffffff', textDecoration: 'none' }}>Log In</Link>
             </p>
           </div>
 
-          </form>
+        </form>
       </div>
 
       {/* Styling rectangles */}

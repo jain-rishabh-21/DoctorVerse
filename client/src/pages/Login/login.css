@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Inria+Serif&display=swap');
 
 body{
-    background-color: #DCDCEF;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    overflow: hidden;
-    height: 100%;
+  background-color: #DCDCEF;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100%;
 }
 
 
 
 /* Login Div */
 .loginDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-    bottom: 0;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  bottom: 0;
+  width: 100%;
 }
 /* Form Of Login */
 .formDiv{
-    background-color: #424088;
-    width: 40%;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-}
+  background-color: #424088;
+  width: 40%;
+  min-height: 60vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 
 /* Doctor Verse Heading */
 .formDiv h3{
@@ -50,115 +50,94 @@ text-transform: uppercase;
 
 /* Form Element {Input Div} */
 .form-element{
-    width: 88%;
-    margin: 2% ;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 75%;
+  margin: 2% ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 
 
 /* Inputs */
 input[type=text] {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #9694E4;
-    outline: none;
-    position: relative;
-    width: 60%;
-  }
-  
-  
-  /* Label */
-
-  label{
-    font-family: 'Cairo';
-    font-style: normal;
-    color: white;
-    font-weight: lighter;
-    font-size: 1.2rem;
-    text-align: left;
-  }
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9694E4;
+  outline: none;
+  position: relative;
+  width: 40%;
+}
 
 
-  /* Buttons */
-  .FormButtonsDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    height: 10%;
-    padding: 5%;
-  }
+/* Label */
 
-  /* Line between Form Buttons */
-  .line{
-    min-height: 100px;
-    width: 1px;
-    background-color:  white;
-    z-index: 6;
-  }
+label{
+  font-family: 'Cairo';
+  font-style: normal;
+  color: white;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
 
-  .signUp button{
-    color: white;
-    font-weight: 500;
-    background-color: rgba(150, 148, 228, 0.35);
-    border: none;
-    width: 200px;
-    height: 50px;
-    border-radius: 24px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    letter-spacing: 0.06em;
-  }
 
-  
+/* Buttons */
+.FormButtonsDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: 10%;
+  padding: 5%;
+}
 
-  /* Company Logos */
-  .signUpWithSocials{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .socialSignupHeading{
-    text-transform: uppercase;
-    color: white;
-    font-family: Cairo;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 56px;
-    letter-spacing: 0.06em;
-    text-align: center;
-  }
-  .signUpSocialsContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  .signUpSocialsContainer img{
-    margin: 0%;
-    border: none;
-  }
-  /* Dot between images */
-  .dot{
-    height: 10px;
-    width: 10px;
-    background-color:  rgba(255, 255, 255, 0.354);
-    border-radius: 50%;
-    border: none;
-    z-index: 6;
-    margin: 0% 5px;
-  }
+/* Line between Form Buttons */
+.line{
+  min-height: 100px;
+  width: 1px;
+  background-color:  white;
+  z-index: 6;
+}
+
+button{
+  color: white;
+  font-weight: 500;
+  background-color: rgba(150, 148, 228, 0.35);
+  border-radius: 20px;
+  border: none;
+  height: 3rem;
+  width: 6rem;
+}
+
+/* Company Logos */
+.signUpWithSocials{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.signUpWithSocials img{
+  margin: 0%;
+  border: none;
+}
+/* Dot between images */
+.dot{
+  height: 20px;
+  width: 20px;
+  background-color:  rgba(255, 255, 255, 0.354);
+  border-radius: 50%;
+  border: none;
+  z-index: 6;
+  margin: 0% 5px;
+}
+
 
 
 /* Rectangular Div's */
 /* Tilted Rectangular Div */
 .rectangleRight{
-    position: absolute;
+  position: absolute;
 width: 450.25px;
 height: 45px;
 left: -10%;
@@ -171,7 +150,7 @@ z-index: -1;
 
 /* Solid Purple Colored  */
 .rectanglePurpleRight{
-    position: absolute;
+  position: absolute;
 width: 450.25px;
 height: 45px;
 left: -10%;
@@ -183,7 +162,7 @@ z-index: -1;
 
 /* Tilted Rectangular Div's Right */
 .rectangleLeft{
-    position: absolute;
+  position: absolute;
 width: 450.25px;
 height: 45px;
 left: 75%;
@@ -193,7 +172,7 @@ transform: rotate(-19.86deg);
 z-index: -1;
 }
 .rectanglePurpleLeft{
-    position: absolute;
+  position: absolute;
 width: 450.25px;
 height: 45px;
 left: 75%;

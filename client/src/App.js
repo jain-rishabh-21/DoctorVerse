@@ -15,7 +15,8 @@ function App() {
          <Route path={routes[1].path} Component={routes[1].element}/>
          <Route path={routes[2].path} Component={routes[2].element}/>
          <Route path={routes[3].path} Component={routes[3].element}/>
-         </Routes>
+         <Route path={routes[4].path} Component={routes[4].element}/>
+        </Routes>
         </Suspense>
         </Router>
 
