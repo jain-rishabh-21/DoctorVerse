@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './signUp.css'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { FaUserAlt } from 'react-icons/fa'
+import { MdEmail, MdPassword } from 'react-icons/md'
+import { AiFillEyeInvisible, AiFillEye, AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
 export default function SignUp() {
   const [details, setDetails] = React.useState({ name: '', email: '', password: '', confirmPassword: '' })
@@ -35,6 +38,24 @@ export default function SignUp() {
     }
   }
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  }
+
+  const showHidePassword = () => {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    if (showPassword) {
+      password.type = 'password';
+      confirmPassword.type = 'password';
+    } else {
+      password.type = 'text';
+      confirmPassword.type = 'text';
+    }
+  }
+
   return (
     <>
       <div className='rectangleRight'></div>
@@ -45,89 +66,107 @@ export default function SignUp() {
       <div className='loginDiv'>
         <form className='formDiv'>
           <h3>Doctor Verse</h3>
+          {/* username */}
           <div className='form-element'>
-            <label>Username</label>
+            <div className='flex gap-2 items-center justify-center text-center'>
+              <FaUserAlt className='relative items-center text-lg text-cyan-100' />
+              <label className='text-[1.2rem] text-cyan-100 text-center'>Username</label>
+            </div>
             <input
-              name='name'
-              className='input'
-              type='text' autoComplete='off'
+              name='email'
+              className='bg-transparent outline-none text-center text-white w-[200px] border-b-2 border-solid'
+              type='text'
+              autoComplete='off'
               onChange={
                 e => setDetails({ ...details, name: e.target.value })
               }
               value={details.name}
-              style={{ color: '#F2F2F2' }}
-              required />
+              required
+              style={{ color: '#F2F2F2' }} />
           </div>
+          {/* email */}
           <div className='form-element'>
-            <label>E-mail Address</label>
+            <div className='flex gap-2 items-center justify-center text-center'>
+              <MdEmail className='relative items-center text-lg text-cyan-100' />
+              <label className='text-[1.2rem] text-cyan-100 text-center'>E-mail</label>
+            </div>
             <input
               name='email'
-              className='input'
+              className='bg-transparent outline-none text-center text-white w-[200px] border-b-2 border-solid'
               type='text'
               autoComplete='off'
               onChange={
                 e => setDetails({ ...details, email: e.target.value })
               }
               value={details.email}
-              style={{ color: '#F2F2F2' }}
-              required />
+              required
+              style={{ color: '#F2F2F2' }} />
           </div>
+          {/* password */}
           <div className='form-element'>
-            <label>Create Password</label>
-            <input
-              name='password'
-              className='input'
-              type='text'
-              autoComplete='off'
-              onChange={
-                e => setDetails({ ...details, password: e.target.value })
-              }
-              value={details.password}
-              style={{ color: '#F2F2F2' }}
-              required />
+            <div className='flex gap-2 items-center justify-center text-center'>
+              <MdPassword className='relative items-center text-lg text-cyan-100' />
+              <label className='text-[1.2rem] text-cyan-100 text-center'>Password</label>
+            </div>
+            <div className='relative items-center'>
+              <input
+                name='password'
+                className='bg-transparent outline-none text-center text-white w-[200px] border-b-2 border-solid'
+                id='password'
+                autoComplete='off'
+                onChange={
+                  e => setDetails({ ...details, password: e.target.value })
+                }
+                value={details.password}
+                required
+              />
+            </div>
           </div>
+          {/* confirm password */}
           <div className='form-element'>
-            <label>Confirm Password</label>
-            <input
-              name='password'
-              className='input'
-              type='text'
-              autoComplete='off'
-              onChange={
-                e => setDetails({ ...details, confirmPassword: e.target.value })
+            <div className='flex gap-2 items-center justify-center text-center'>
+              <MdPassword className='relative items-center text-lg text-cyan-100' />
+              <label className='text-[1.2rem] text-cyan-100 text-center'>Password</label>
+            </div>
+            <div className='relative items-center'>
+              <input
+                name='password'
+                id='confirmPassword'
+                className='bg-transparent outline-none text-center text-white w-[200px] border-b-2 border-solid'
+                autoComplete='off'
+                onChange={
+                  e => setDetails({ ...details, confirmPassword: e.target.value })
+                }
+                value={details.confirmPassword}
+                required
+              />
+              {
+                showPassword ? (
+                  <AiFillEyeInvisible className='relative bottom-6 left-[185px] items-center text-lg text-cyan-100' onClick={() => {
+                    togglePassword();
+                    showHidePassword();
+                  }} />
+                ) : (
+                  <AiFillEye className='relative bottom-6 left-[185px] items-center text-lg text-cyan-100' onClick={() => {
+                    togglePassword();
+                    showHidePassword();
+                  }} />
+                )
               }
-              value={details.confirmPassword}
-              style={{ color: '#F2F2F2' }}
-              required />
+            </div>
           </div>
 
           {/* Form Buttons */}
-          <div className='FormButtonsDiv'>
-            <div className='signUp'><button className='formButton'
-              style={{
-                backgroundColor: '#F2F2F2',
-                color: '#000000',
-                border: '1px solid #000000',
-                borderRadius: '5px',
-                width: '5rem',
-                height: '3rem',
-                fontSize: '1rem',
-                fontWeight: 'bold',
-                cursor: 'pointer'
-              }}
-              onClick={handleSignUp}>Sign Up</button></div>
+          <div className='flex justify-around pb-3 items-center gap-6'>
+            <div className='signUp'><button onClick={handleSignUp} className=''>Sign Up</button></div>
             <div className='line'></div>
-            <div className='signUpWithSocials'>
-              <a href="https://www.freepnglogos.com/pics/google-logo" title="Image from freepnglogos.com">
-                <img
-                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png"
-                  width="50" alt="google logo icon png transparent background osteopathy" />
-              </a>
-              <div className='dot'></div>
-              <a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com">
-                <img style={{ backgroundColor: "#F2F2F2", borderRadius: "50%", border: "1px solid rgb(0,0,0,0)" }} src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png"
-                  width="50" alt="facebook icon png background" />
-              </a>
+            <div className='flex flex-col gap-4 justify-center items-center'>
+              <div className='text-xl text-cyan-200'>signup with</div>
+              <div className='flex justify-center items-center gap-2'>
+                <AiFillGoogleCircle className='text-5xl hover:text-slate-500 text-cyan-300 hover:scale-125 transition-all ease-in-out duration-150 cursor-pointer' />
+                <div className='dot'></div>
+                <AiFillFacebook className='text-5xl hover:text-[#0165E1] text-cyan-300 hover:scale-125 transition-all ease-in-out duration-150 cursor-pointer' />
+              </div>
             </div>
           </div>
           <div className='signUp'>

@@ -61,9 +61,10 @@ export default function Login() {
       <div className='loginDiv'>
         <form className='formDiv'>
           <h3>Doctor Verse</h3>
+          {/*username/email  */}
           <div className='form-element'>
             <div className='flex gap-2 items-center justify-center text-center'>
-              <FaUserAlt className='relative items-center text-lg text-cyan-100' />
+              <MdEmail className='relative items-center text-lg text-cyan-100' />
               <label className='text-[1.2rem] text-cyan-100 text-center'>E-mail</label>
             </div>
             <input
@@ -78,7 +79,7 @@ export default function Login() {
               required
               style={{ color: '#F2F2F2' }} />
           </div>
-
+          {/* password */}
           <div className='form-element'>
             <div className='flex gap-2 items-center justify-center text-center'>
               <MdPassword className='relative items-center text-lg text-cyan-100' />
