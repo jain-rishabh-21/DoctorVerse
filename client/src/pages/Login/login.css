@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Inria+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Inria+Serif&display=swap');
 
-body {
-  background-color: #dcdcef;
+body{
+  background-color: #DCDCEF;
   padding: 0;
   margin: 0;
   max-width: 100%;
@@ -9,8 +9,10 @@ body {
   height: 100%;
 }
 
+
+
 /* Login Div */
-.loginDiv {
+.loginDiv{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +22,7 @@ body {
   width: 100%;
 }
 /* Form Of Login */
-.formDiv {
+.formDiv{
   background-color: #424088;
   width: 40%;
   min-height: 60vh;
@@ -29,33 +31,37 @@ body {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
+}
 
-  /* Doctor Verse Heading */
-  .formDiv h3 {
-    font-family: "Inria Serif";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    /* identical to box height */
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: #ffffff;
-    margin: 5% 0%;
-    line-height: 84px;
-    text-transform: uppercase;
-  }
+/* Doctor Verse Heading */
+.formDiv h3{
+font-family: 'Inria Serif';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.06em;
+color: #FFFFFF;
+margin: 5% 0%;
+line-height: 84px;
+text-transform: uppercase;
+}
 
-  /* Form Element {Input Div} */
-  .form-element {
-    width: 75%;
-    margin: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
-  /* Inputs */
-  /* input[type=text] {
+/* Form Element {Input Div} */
+.form-element{
+  width: 75%;
+  margin: 2% ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+/* Inputs */
+/* input[type=text] {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #9694E4;
@@ -63,7 +69,8 @@ body {
     position: relative;
     width: 60%;
   } */
-
+  
+  
   /* Label */
 
   /* label{
@@ -83,127 +90,130 @@ body {
     color: cyan;
   } */
 
-  /* Label */
 
-  label {
-    font-family: "Cairo";
-    font-style: normal;
-    color: white;
-    font-weight: lighter;
-    font-size: 1.2rem;
+/* Label */
+
+label{
+  font-family: 'Cairo';
+  font-style: normal;
+  color: white;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+
+/* Buttons */
+.FormButtonsDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: 10%;
+  padding: 5%;
+}
+
+/* Line between Form Buttons */
+.line{
+  min-height: 100px;
+  width: 1px;
+  background-color:  white;
+  z-index: 6;
+}
+
+button{
+  color: white;
+  font-weight: 500;
+  background-color: rgba(150, 148, 228, 0.35);
+  border-radius: 20px;
+  border: none;
+  height: 3rem;
+  width: 8rem;
+}
+
+/* Company Logos */
+.signUpWithSocials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signUpWithSocials img{
+  margin: 0%;
+  border: none;
+}
+/* Dot between images */
+.dot{
+  height: 20px;
+  width: 20px;
+  background-color:  rgba(255, 255, 255, 0.354);
+  border-radius: 50%;
+  border: none;
+  z-index: 6;
+  margin: 0% 5px;
+}
+
+
+
+/* Rectangular Div's */
+/* Tilted Rectangular Div */
+.rectangleRight{
+  position: absolute;
+width: 450.25px;
+height: 45px;
+left: -10%;
+top: 45%;
+
+background: #A6A9E3;
+transform: rotate(-19.86deg);
+z-index: -1;
+}
+
+/* Solid Purple Colored  */
+.rectanglePurpleRight{
+  position: absolute;
+width: 450.25px;
+height: 45px;
+left: -10%;
+top: 75%;
+background: #424088;
+transform: rotate(-19.86deg);
+z-index: -1;
+}
+
+/* Tilted Rectangular Div's Right */
+.rectangleLeft{
+  position: absolute;
+width: 450.25px;
+height: 45px;
+left: 75%;
+top: 30%;
+background: #A6A9E3;
+transform: rotate(-19.86deg);
+z-index: -1;
+}
+.rectanglePurpleLeft{
+  position: absolute;
+width: 450.25px;
+height: 45px;
+left: 75%;
+top: 60%;
+background: #424088;
+transform: rotate(-19.86deg);
+z-index: -1;
+}
+
+@media screen and (max-width:1000px){
+  .FormButtonsDiv{
+    flex-direction: column;
   }
 
-  /* Buttons */
-  .FormButtonsDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 70%;
-    height: 10%;
-    padding: 5%;
-  }
-
-  /* Line between Form Buttons */
-  .line {
-    min-height: 100px;
-    width: 1px;
-    background-color: white;
+  .line{
+    height: 1px;
+     min-height: auto;
+     margin-top: 20px;
+    width: 200px;
+    background-color:  white;
     z-index: 6;
-  }
-
-  button {
-    color: white;
-    font-weight: 500;
-    background-color: rgba(150, 148, 228, 0.35);
-    border-radius: 20px;
-    border: none;
-    height: 3rem;
-    width: 6rem;
-  }
-
-  /* Company Logos */
-  .signUpWithSocials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .signUpWithSocials img {
-    margin: 0%;
-    border: none;
-  }
-  /* Dot between images */
-  .dot {
-    height: 20px;
-    width: 20px;
-    background-color: rgba(255, 255, 255, 0.354);
-    border-radius: 50%;
-    border: none;
-    z-index: 6;
-    margin: 0% 5px;
-  }
-
-  /* Rectangular Div's */
-  /* Tilted Rectangular Div */
-  .rectangleRight {
-    position: absolute;
-    width: 450.25px;
-    height: 45px;
-    left: -10%;
-    top: 45%;
-
-    background: #a6a9e3;
-    transform: rotate(-19.86deg);
-    z-index: -1;
-  }
-
-  /* Solid Purple Colored  */
-  .rectanglePurpleRight {
-    position: absolute;
-    width: 450.25px;
-    height: 45px;
-    left: -10%;
-    top: 75%;
-    background: #424088;
-    transform: rotate(-19.86deg);
-    z-index: -1;
-  }
-
-  /* Tilted Rectangular Div's Right */
-  .rectangleLeft {
-    position: absolute;
-    width: 450.25px;
-    height: 45px;
-    left: 75%;
-    top: 30%;
-    background: #a6a9e3;
-    transform: rotate(-19.86deg);
-    z-index: -1;
-  }
-  .rectanglePurpleLeft {
-    position: absolute;
-    width: 450.25px;
-    height: 45px;
-    left: 75%;
-    top: 60%;
-    background: #424088;
-    transform: rotate(-19.86deg);
-    z-index: -1;
-  }
-
-  @media screen and (max-width: 1000px) {
-    .FormButtonsDiv {
-      flex-direction: column;
-    }
-
-    .line {
-      height: 1px;
-      min-height: auto;
-      margin-top: 20px;
-      width: 200px;
-      background-color: white;
-      z-index: 6;
-    }
   }
 }
