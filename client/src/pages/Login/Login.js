@@ -4,6 +4,8 @@ import { FaUserAlt } from 'react-icons/fa'
 import { MdEmail, MdPassword } from 'react-icons/md'
 import { AiFillEyeInvisible, AiFillEye, AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
 
@@ -22,6 +24,34 @@ export default function Login() {
     } else {
       password.type = 'text';
       confirmPassword.type = 'text';
+    }
+  }
+
+  const [details, setDetails] = React.useState({ email: '', password: '' })
+  const navigate = useNavigate()
+  const handleLogin = async (e) => {
+    e.preventDefault()
+    const { email, password } = details
+    const user = { email, password }
+    try {
+      const response = await fetch('http://localhost:4000/userLogin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+      })
+      const json = await response.json()
+      if (json.token) {
+        alert('Login Successful')
+        localStorage.setItem('token', json.token)
+        navigate('/')
+      }
+      else {
+        alert('Invalid Credentials')
+      }
+    } catch (error) {
+      console.error('Error:', error)
     }
   }
 
