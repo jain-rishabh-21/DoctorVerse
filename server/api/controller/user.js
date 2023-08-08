@@ -13,6 +13,7 @@ const registerUser = async (req, res) => {
       password: req.body.password
     });
     const { name, email, password } = payloadValidate;
+    //Captcha Verification
     const secret = "YOUR SECRET KEY";
     const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${req.body.Token}`;
     const response = await axios.post(url);
