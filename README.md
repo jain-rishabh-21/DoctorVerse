@@ -43,13 +43,14 @@ This would be an enriching experience for all Student Developers, Project Manage
 To Run the Full Application(Frontend + Backend with Database) using lightweight Docker Containers, Shoot up a terminal and run:
 
 ```
+cd client
 docker build -t frontend:1 -f Dockerfile.frontend .
 docker run -it -p 3000:3000 frontend:1 
 ```
 Shoot up a new terminal for backend and run:
 
 ```
-cd Express_js_server
+cd server
 docker build -t backend:1 -f Dockerfile.backend .
 docker run -it -p 4000:4000 backend:1
 ```
