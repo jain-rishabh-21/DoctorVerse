@@ -5,14 +5,15 @@ import { useNavigate } from 'react-router-dom'
 import { FaUserAlt } from 'react-icons/fa'
 import { MdEmail, MdPassword } from 'react-icons/md'
 import { AiFillEyeInvisible, AiFillEye, AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
+import ReCAPTCHA from "react-google-recaptcha"
 
 export default function SignUp() {
-  const [details, setDetails] = React.useState({ name: '', email: '', password: '', confirmPassword: '' })
+  const [details, setDetails] = React.useState({ name: '', email: '', password: '', confirmPassword: '', Token: '' })
   const navigate = useNavigate()
   const handleSignUp = async (e) => {
     e.preventDefault()
-    const { name, email, password } = details
-    const user = { name, email, password }
+    const { name, email, password, Token } = details
+    const user = { name, email, password, Token }
     try {
       if (password !== details.confirmPassword) {
         alert('Passwords do not match')
@@ -56,6 +57,8 @@ export default function SignUp() {
     }
   }
 
+  const reRef = React.createRef(null);
+
   return (
     <>
       <div className='rectangleRight'></div>
@@ -64,6 +67,7 @@ export default function SignUp() {
 
       {/* Login Actual Div */}
       <div className='loginDiv'>
+
         <form className='formDiv'>
           <h3>Doctor Verse</h3>
           {/* username */}
@@ -155,6 +159,11 @@ export default function SignUp() {
               }
             </div>
           </div>
+          <ReCAPTCHA
+            onChange={(token) => setDetails({ ...details, Token: token })}
+            sitekey="Your client site key"
+          />
+          <br />
 
           {/* Form Buttons */}
           <div className='flex justify-around pb-3 items-center gap-6'>
@@ -175,6 +184,8 @@ export default function SignUp() {
               Already have an account? <Link to='/login' style={{ color: '#ffffff', textDecoration: 'none' }}>Log In</Link>
             </p>
           </div>
+
+
 
         </form>
       </div>
