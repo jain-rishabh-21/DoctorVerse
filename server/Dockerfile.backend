@@ -1,0 +1,8 @@
+FROM node:20-alpine
+MAINTAINER label="Rohan Rustagi"
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm install react-scripts
+COPY . .
+EXPOSE 4000
+CMD ["npm", "run", "server"]

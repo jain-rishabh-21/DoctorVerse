@@ -38,6 +38,23 @@ This would be an enriching experience for all Student Developers, Project Manage
 - [Introduction to MongoDB](https://frontendmasters.com/courses/mongodb/)
 - [Full Stack Web Development with Flask](https://www.youtube.com/watch?v=zb3Qk8SG5Ms&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
 
+## Steps to Use & Execute Dockerized Containers
+
+To Run the Full Application(Frontend + Backend with Database) using lightweight Docker Containers, Shoot up a terminal and run:
+
+```
+docker build -t frontend:1 -f Dockerfile.frontend .
+docker run -it -p 3000:3000 frontend:1 
+```
+Shoot up a new terminal for backend and run:
+
+```
+cd Express_js_server
+docker build -t backend:1 -f Dockerfile.backend .
+docker run -it -p 4000:4000 backend:1
+```
+
+
 ## License📜
 
 [MIT License](https://github.com/jain-rishabh-21/DoctorVerse/blob/main/LICENSE)
