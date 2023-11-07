@@ -5,7 +5,6 @@ const User = require('../models/doctor');
 const { resetToken } = require('../Authentication/jwt');
 const { resetEmail } = require('../Authentication/template');
 
-
 const changePassword = async (req, res) => {
   try {
     const payload = await changePasswordSchema.validateAsync(req.body);
