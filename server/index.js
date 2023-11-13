@@ -12,7 +12,7 @@ const cors = require('cors');
 connectDB();
 
 app.use(cors());
-const allowedOrigins = ['http://localhost:5173', "http://127.0.0.1:5173", 'http://localhost:3000', 'http://127.0.0.1:5500', 'deployed link'];
+const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000', 'http://127.0.0.1:5500', 'deployed link'];
 
 // CORS configuration middleware
 app.use(
@@ -24,7 +24,7 @@ app.use(
       } else {
         callback(new Error('Not allowed by CORS'));
       }
-    },
+    }
   })
 );
 

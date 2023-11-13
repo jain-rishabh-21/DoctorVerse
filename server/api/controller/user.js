@@ -13,12 +13,11 @@ const registerUser = async (req, res) => {
       password: req.body.password
     });
     const { name, email, password } = payloadValidate;
-    //Captcha Verification
-    const secret = "YOUR SECRET KEY";
+    // Captcha Verification
+    const secret = 'YOUR SECRET KEY';
     const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${req.body.Token}`;
     const response = await axios.post(url);
     if (response.data.success) {
-
       const hashPassword = await encodePassword(password);
       const user = new User({
         name,
@@ -27,8 +26,7 @@ const registerUser = async (req, res) => {
       });
       await user.save();
       res.status(201).json({ name, email });
-    }
-    else {
+    } else {
       res.status(400).json({ message: 'Invalid Captcha' });
     }
   } catch (e) {
